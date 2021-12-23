@@ -1,0 +1,173 @@
+:root{
+    --pale-blue : hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --light-blue: hsl(225, 100%, 98%);
+    --desat-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body{
+    font-family: 'Red Hat Display';
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/pattern-background-desktop.svg') no-repeat ;
+    background-size: cover;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--pale-blue);
+    opacity: 0.8;
+    z-index: 1;
+}
+.container{
+    position: relative;
+}
+.order-card-wrap{
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 800px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 400px;
+    height: 600px;
+    margin: auto;
+    box-shadow: 0px 25px 35px -6px rgb(114, 128, 167, 0.3);
+    transition: 0.3s;
+    border-radius: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.order-card-wrap .order-hero-img{
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    display: block;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.order-card-wrap .order-card-inner{
+    height: 100%;
+    background: white;
+    padding: 30px;
+    margin: 0;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.order-card-inner h2{
+    font-size: 26px;
+    font-weight: 900;
+    margin-top: 0px;
+}
+.order-card-inner p{
+    color: var(--desat-blue);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.order-card-inner .order-annual-plan{
+    display: flex;
+    background : var(--light-blue);
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.order-annual-plan .order-annual-plan-desc{
+    width: 100%;
+    max-width: 80%;
+    display: flex;
+    
+}
+.order-annual-plan-desc .order-annual-img{
+    width: 50px;
+    height: 50px;
+    padding-right: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.order-annual-plan-desc .order-annual-price h4{
+    padding: 0;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.order-annual-plan-desc .order-annual-price span{
+    color: var(--desat-blue);
+}
+.order-annual-plan .order-annual-plan-link{
+    width: 100%;
+    max-width: 20%;
+   
+}
+.order-annual-plan-link a{
+    color: var(--bright-blue);
+}
+.order-annual-plan-link a:hover{
+    text-decoration: none;
+}
+
+.order-card-inner .order-card-buttons{
+   display: flex;
+   flex-direction: column;
+}
+.order-card-buttons .order-btn{
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.order-btn-blue{
+    background: var(--bright-blue);
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 20px 30px 0 rgb(56, 41, 224, 0.35);
+    border: none;
+    font-weight: 700;
+    
+}
+.order-btn-blue:hover{
+    opacity: 0.8;
+}
+.order-btn-default{
+    background: none;
+    border: none;
+    color: var(--desat-blue);
+    font-weight: 700;
+}
+.order-btn-default:hover{
+    color: black;
+}
+
+@media only screen and (max-width:375px) {
+    body{
+        background: url('images/pattern-background-mobile.svg') no-repeat;
+    }
+    .order-card-wrap{
+        max-width: 90%;
+        overflow: hidden;
+    }
+    .order-card-wrap .order-card-inner{
+        padding: 20px;
+    }
+    .order-card-inner .order-annual-plan{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .order-annual-plan-desc .order-annual-price h4{
+        margin-bottom: 5px;
+    }
+}
